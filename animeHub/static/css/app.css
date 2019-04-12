@@ -1,0 +1,165 @@
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.btn-info{
+background-color: #FF9900!important;
+color: #000000!important;
+border-radius: 25px!important;
+border: #000000!important;
+}
+.mb-4{
+
+border-radius: 25px!important;
+}
+html {
+  height: 100%;
+  text-align: center!important;
+
+  background-color:#24292e;
+}
+
+ .h3{
+   margin: 0%!important;
+   position: absolute!important;
+text-align: center!important;
+
+ }
+
+.hub {
+  display: block;
+  font-family: sans-serif;
+  font-weight: bold!important;
+  font-size: 3vw;
+  position: relative;
+  text-align: center;
+color: white;
+ }
+
+.hub span:nth-child(2) {
+  background: #FF9900;
+  color: #000000;
+  border-radius: 1vw;
+  padding: 0 .3vw .3vw .3vw;
+  display: inline-block;
+}
+
+
+
+ 
+/* Show the tooltip text when you mouse over the tooltip container */
+ 
+ 
+.gList {
+    text-align: left !important;
+}
+
+header{
+  box-shadow: 0px 2px 8px #888888;
+
+}
+
+footer,
+header { color: #FF9900;
+ 
+
+
+    padding: 15px;
+    text-align: center;
+    background-color: #24292e;
+}
+
+ 
+
+
+h2 {
+    text-align: center !important;
+}
+
+.container {
+    text-align: center;
+}
+
+body {
+    text-align: center;
+    background-color: #24292e;
+    color: #FF9900;
+}
+
+.modbut:hover {
+
+    filter: brightness(120%);
+ 
+}
+ 
+.container:hover {
+  z-index: 2;
+  visibility: visible;
+}
+.btn-outline-info{
+  border-color: #FF9900!important;
+  
+ background-color: none;
+  color: #FF9900!important; 
+ }
+ 
+ .btn-outline-info:hover{
+  background-color: #FF9900!important;
+  color: black!important; 
+ }
+
+
+ .content-section{
+   text-align: left;
+   color: #FF9900;
+ }
+.modbut {
+  position: relative;
+
+    /* float: right; */
+    min-width: 120px;
+    min-height: 20%;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: 1;
+
+}
+
+li
+{
+   display: list-item;
+}
+
+ 
+
+
+@media screen and (min-width: 600px) {
+  ul {
+    list-style-type: square;
+  
+    
+  
+      -webkit-column-count: 2!important;
+      column-count:2!important;
+  
+      list-style-position: outside;
+  }
+  
+}
+ul {
+  list-style-type: square;
+
+  
+
+    -webkit-column-count: 1;
+    column-count:1;
+
+    list-style-position: outside;
+}

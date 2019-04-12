@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<!-- ----------------------------------------------------------------------------------------- -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="assignment2">
+    <meta name="authors" content="Kevin Christopher 815007355 & Amrit Sookhai 814001632 ">
+    <title>Assignment2</title>
+
+</head>
+
+<link rel="stylesheet" href="/static/css/app.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+
+
+<body id="app">
+
+    <header>
+        <div class="container-fluid hub">
+            <h1> <span contenteditable="true">Anime</span>
+                <span contenteditable="true">hub</span></h1>
+        </div>
+
+    </header>
+    <div class="col-md-8">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+       </div>
+    {% block content %}{% endblock %}
+    <!-- footerz -->
+    <div id="footer">
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+        </script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js">
+        </script>
+
+
+
+
+
+        <script src="/static/js/anime.js"></script>
+        <footer class="container-fluid padding">
+            <p>Kevin christopher 815007355 & Amrit Sookhai 814001632</p>
+
+
+        </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>

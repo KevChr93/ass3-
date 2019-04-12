@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="home list">
+    <!-- ----------------------------------------------------------------------------------------- -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+
+                    <h4 class="modal-title w-100 font-weight-bold">Add new Anime</h4>
+
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <form id="addAnime" onsubmit="return false">
+                                <input type="number" min=1 id="Anime_ID" class="form-control is-valid mb-4" required
+                                    placeholder="Anime_ID">
+
+                                <input type="text" id="Name" class="form-control mb-4" required placeholder="Name">
+
+                                <div class="input-group">
+                                    <input type="text" id="genre" class="form-control mb-4" required
+                                        placeholder="genre">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info" onclick="addGenre()">+
+                                            Genre</button>
+                                    </span>
+
+                                </div>
+
+                                <div class="container-fluid padding">
+                                    <ul id="genreList"></ul>
+                                </div>
+
+                                <input type="text" id="type" class="form-control mb-4" required placeholder="Type">
+
+                                <input type="text" id="epi" class="form-control mb-4" required placeholder="Episodes">
+
+                                <input type="number" min=0 max=10 id="rating" class="form-control is valid mb-4"
+                                    required placeholder="rating">
+
+                                <input type="number" min=0 id="members" class="form-control is valid mb-4" required
+                                    placeholder="Members">
+
+
+                                <button class="btn btn-info btn-block my-4" type="Submit" oneclick=>Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="column">
+                <h2>Add new Anime<input class=" btn animated shake modbut" data-placement="bottom"
+                        data-tooltip="tooltip" title="Add Anime Manually" type="image"
+                        src="/static/icons/material-icon-2155448_960_720.png" alt="Submit" width="10%" height="20%"
+                        data-toggle="modal" data-target="#modalLoginForm"></h2>
+
+            </div>
+
+            <div class="column">
+                <div class="col-sm-8">
+
+
+                    {% for anime in records %}  
+
+
+                    <p>{{anime.Anime_Id}}</p>
+                    <p>{{anime.Name}}</p>
+                    <p>{{anime.Rating}}</p>
+
+
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}
